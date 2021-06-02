@@ -1,2 +1,5 @@
 # Project exclude paths
-/node_modules/
+#/node_modules/
+#cypress.env.json
+#cypress.test.json
+#cypress.pro.json
