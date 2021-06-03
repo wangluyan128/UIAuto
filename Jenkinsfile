@@ -11,7 +11,8 @@ pipeline{ //pipeline是声明式流水线的特定语法，它定义包含执行
 				//sh "export path=$path:/var/jenkins_home/workspace/onevue/node-v16.2.0-linux-x64/bin"
 				//sh "source /etc/profile"
 				//sh "node -v"
-			    sh "npm install"
+			    //sh "npm install"
+			    println "Build"
 			}
 		}
 		stage('Test'){
