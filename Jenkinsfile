@@ -1,6 +1,9 @@
 //Jenkinsfile(声明式流水线)
 pipeline{ //pipeline是声明式流水线的特定语法，它定义包含执行整个流水线的所有内容和指令
 	agent any //agent是声明式流水线的特定语法，它指示Jenkins在节点上为整个流水线分配一个执行器和工作区
+	tools{
+    			nodejs 'nodejs'
+    		}
 	stages{
 		stage('Build'){ //stage是一个描述stage of this pipeline的语法块
 			steps{ // steps是声明式流水线的一种特定语法，它描述了该stage中要运行的步骤
@@ -27,9 +30,7 @@ pipeline{ //pipeline是声明式流水线的特定语法，它定义包含执行
 				println "Deploy"
 			}
 		}
-		tools{
-			Node.js 'nodejs'
-		}
+
 		//environment{
 			//CHROME_BIN='/bin/google-chrome'
 		//}
