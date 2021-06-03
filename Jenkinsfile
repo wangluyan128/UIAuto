@@ -15,6 +15,7 @@ pipeline{ //pipeline是声明式流水线的特定语法，它定义包含执行
 				//sh "source /etc/profile"
 				sh "node -v"
 			    sh "npm install"
+			    sh "cypress install"
 			    println "Build"
 			}
 		}
