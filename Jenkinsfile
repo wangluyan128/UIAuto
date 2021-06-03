@@ -16,7 +16,7 @@ pipeline{ //pipeline是声明式流水线的特定语法，它定义包含执行
 				sh "node -v"
 			    sh "npm install"
 			    sh "npm install cypress --save-dev" //操作系统不同
-			    sh "npm i xvfb"
+			    //sh "npm i xvfb"
 			    println "Build"
 			}
 		}
