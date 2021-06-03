@@ -3,7 +3,6 @@ pipeline{ //pipeline是声明式流水线的特定语法，它定义包含执行
 	agent any //agent是声明式流水线的特定语法，它指示Jenkins在节点上为整个流水线分配一个执行器和工作区
 	tools{
     			nodejs 'nodejs'
-    			xvfb 'xvfb'
     		}
 	stages{
 		stage('Build'){ //stage是一个描述stage of this pipeline的语法块
