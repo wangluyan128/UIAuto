@@ -10,9 +10,7 @@
   "port1": "",
   "reporter": "spec",
   "reporterOptions": {
-
   },
-  "testFiles": "**/*.*",
   "watchForFileChanges":false,
 
   "defaultCommandTimeout": 4000,

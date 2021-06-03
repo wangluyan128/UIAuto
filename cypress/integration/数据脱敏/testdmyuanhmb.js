@@ -52,12 +52,13 @@ describe("源和目标",()=>{
 
             cy.textvalue(createSource.newname,"关系数据库测试")
             cy.selectvalue(createSource.newtype,"关系型数据库",'关系型数据库')
-            cy.selectvalue(createSource.newsubtype,"MySQL","MySQL")
+            cy.selectvalue(createSource.newsubtype,"Mysql","Mysql")
             cy.rediovalue(createSource.newredioyuan)
             cy.get(createSource.newnextbtn).click()
 
             cy.textvalue(createSource.newIpadress,"192.168.42.46")
-            cy.textvalue(createSource.newdatabase,"testdemo")
+            cy.textvalue(createSource.newport,"3306")
+            cy.textvalue(createSource.newdatabasename,"testdemo")
             cy.textvalue(createSource.newusername,"root")
             cy.textvalue(createSource.newpassword,"12345678")
             cy.get(createSource.newconfirm).click()

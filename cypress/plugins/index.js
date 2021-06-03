@@ -32,13 +32,14 @@ const  fs = require('fs-extra')
 const  path = require('path')
 //执行环境配置文件
 function getConfigurationByFile(file) {
-    const pathToConfigFile = path.resolve('..','UIAuto/cypress/config','cypress.test.json')
+    const pathToConfigFile = path.resolve('..','UIAuto/cypress/config','cypress.'+file+'.json')
     console.log(pathToConfigFile)
     return fs.readJson(pathToConfigFile)
 }
 module.exports = (on,config)=>{
     //指定一个环境变量，若没有指定，则使用cypress.test.json
-    const  file = config.env.configFile = 'test'
+    const  file = config.env.configFile||"test"
+
     return getConfigurationByFile(file)
 }
 

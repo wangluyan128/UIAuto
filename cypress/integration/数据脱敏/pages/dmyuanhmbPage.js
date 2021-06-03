@@ -27,9 +27,11 @@ export default class yuanhmbPage {
 
 
         //关系型数据库
+        this.newtoname = "#scroll > .form-horizontal > :nth-child(1) > .col-lg-6 > .form-control"
         this.newIpadress = ':nth-child(2) > .col-lg-6 > .form-control'
-        this.newdatabase = ':nth-child(3) > .col-lg-6 > .form-control'
-        this.newport = ':nth-child(4) > .col-lg-6 > .form-control'
+        this.newdatabasename = ':nth-child(4) > .col-lg-6 > .form-control'
+        this.newport = ':nth-child(3) > .col-lg-6 > .form-control'
+
         this.newusername = ':nth-child(5) > .col-lg-6 > .form-control'
         this.newpassword = ':nth-child(6) > .col-lg-6 > .form-control'
         this.newconfirm = '[ng-if="addModel.step == \'db\'"] > .modal-footer > [data-text="确定"]'
