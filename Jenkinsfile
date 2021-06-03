@@ -17,7 +17,7 @@ pipeline{ //pipeline是声明式流水线的特定语法，它定义包含执行
 		}
 		stage('Test'){
 			steps{
-				sh 'cypress run --headless --spec "cypress/integration/数据脱敏/testdmyuanhmb.js"'
+				sh 'npm run cypress:run --headless --spec "cypress/integration/数据脱敏/testdmyuanhmb.js"'
 				//junit 'reports/**/*.xml' //junit是另一个聚合测试报告的流水线step
 			}
 		}
