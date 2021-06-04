@@ -32,7 +32,7 @@ const  fs = require('fs-extra')
 const  path = require('path')
 //执行环境配置文件
 function getConfigurationByFile(file) {
-    const pathToConfigFile = path.resolve('..','cypress/config','cypress.'+file+'.json')
+    const pathToConfigFile = path.resolve('.','cypress/config','cypress.'+file+'.json')
     console.log(pathToConfigFile)
     return fs.readJson(pathToConfigFile)
 }
