@@ -26,6 +26,7 @@ pipeline {
          //CYPRESS_RECORD_KEY = credentials('cypress-example-kitchensink-record-key')
        //}
         steps {
+            sh 'docker --help'
             sh 'rm -rf node_modules'
             sh 'npm install'
          //   sh 'npm rebuild node-sass'
