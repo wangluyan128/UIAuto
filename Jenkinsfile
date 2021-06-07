@@ -10,9 +10,9 @@ pipeline {
   //         CHROME_BIN = '/bin/google-chrome' // 全局配置环境变量
   //     }
 
-  // tools{
-  //  			nodejs 'nodejs'
-  //  	}
+   tools{
+    			nodejs 'nodejs'
+    	}
     // Jenkins流水线下的配合
 
    stages {
