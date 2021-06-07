@@ -32,11 +32,11 @@ pipeline {
         }
 
      }
-     stage('运行测试') { 第二步pipe
-                 steps {
-                     sh 'npm run test:e2e'
-                 }
-             }
+     stage('运行测试') { //第二步pipe
+         steps {
+            sh 'npm run test:e2e'
+         }
+     }
    }
    //post {
    //        always {
