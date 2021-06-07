@@ -5,7 +5,9 @@ pipeline {
        image 'cypress/base:10'
      }
    }
-
+   tools{
+    			nodejs 'nodejs'
+    	}
    stages {
      stage('build and test') {
        environment {
