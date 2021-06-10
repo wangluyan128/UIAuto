@@ -1,4 +1,4 @@
-import {username,password,btn} from "../views/dmLoginView.json"
+import {username,password,btn,err} from "../els/dmLoginEl.json"
 
 export default class LoginPage {
     constructor() {
@@ -13,6 +13,10 @@ export default class LoginPage {
 
     get getBtn(){
         return cy.get(btn)
+    }
+
+    get getErr(){
+        return cy.get(err)
     }
 
 }

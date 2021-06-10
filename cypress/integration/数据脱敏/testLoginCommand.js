@@ -1,5 +1,5 @@
-import LoginPage from "./pages/login";
-import mainPage from "./pages/mainPage";
+import LoginPage from "./Page/login";
+import mainPage from "./Page/mainPage";
 
 context('登录测试，PO模式',()=>{
     const username = 'jane.lane'

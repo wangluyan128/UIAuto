@@ -1,0 +1,14 @@
+{
+    "nav" : {
+        "home" : "首页",
+        "source" : "源和目标",
+        "discoverytask" : "敏感发现",
+        "sensitive" : "脱敏源",
+        "job" : "脱敏作业",
+        "strategy" : "脱敏策略" ,
+        "report" : "系统报表",
+        "monitor" : "系统管理",
+        "datatracing" : "数据溯源"
+    }
+
+}

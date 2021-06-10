@@ -1,0 +1,63 @@
+{
+    "main" : {
+        "add" : "[ng-click=\"source.addFun()\"]",
+        "del" : "[ng-click=\"source.deleteFun()\"]",
+        "bathauth" : "批量授权",
+        "hadoop" : "Hadoop集群配置"
+    },
+    "add" : {
+        "name" : ":nth-child(1) > .col-lg-6 > .form-control",
+        "type" : ":nth-child(2) > .col-lg-3 > .form-control",
+        "subtype" : ":nth-child(3) > .col-lg-3 > .form-control",
+        "redioTS" : "[type=\"radio\"]",
+        "next" : "下一步"
+
+    },
+    "next" : {
+        "name" : "#scroll > .form-horizontal > :nth-child(1) > .col-lg-6 > .form-control",
+        "ipadress" : ":nth-child(2) > .col-lg-6 > .form-control",
+        "databasename" : ":nth-child(4) > .col-lg-6 > .form-control",
+        "port" : ":nth-child(3) > .col-lg-6 > .form-control",
+
+        "username" : ":nth-child(5) > .col-lg-6 > .form-control",
+        "password" : ":nth-child(6) > .col-lg-6 > .form-control",
+        "confirm" : "[ng-if=\"addModel.step == 'db'\"] > .modal-footer > [data-text=\"确定\"]",
+
+        "code" : "[ng-show:\"addModel.cType.code ::: \"DBF\" || addModel.cType.code ::: \"XML\" || addModel.cType.code ::: \"JSON\" || addModel.cType.code ::: \"MySQL dump\"] > .col-lg-6 > .form-control",
+        "rediobendi" : "#local",
+        "redioyemiansc" : "#upload",
+        "redioyuanchengwj" : "#remote",
+        "filedirectory" : ".form-group.ng-scope > .col-lg-6 > .form-control"
+    },
+
+    "search" : {
+        "type" : "[ng-model=\"source.listObj.searchPtype\"]",
+        "subtype" : "[ng-model=\"source.listObj.searchCType\"]",
+        "name": ".searchBox > .col-lg-8 > .ng-valid-maxlength",
+        "username" : "[ng-model=\"source.listObj.groupId\"]",
+        "source" : "[ng-model=\"source.ioType\"]",
+        "btn" : ".col-lg-8 > .btn"
+
+    },
+
+    "edit": {
+        "btn" : "编辑",
+        "name" : ":nth-child(1) > .col-lg-6 > .form-control",
+        "nextstep" : "下一步",
+        "name1" : "#scroll > .form-horizontal > :nth-child(1) > .col-lg-6 > .form-control",
+        "ipaddress" : ":nth-child(2) > .col-lg-6 > .form-control",
+        "port" : ":nth-child(3) > .col-lg-6 > .form-control",
+        "databasename" : ":nth-child(4) > .col-lg-6 > .form-control",
+        "username" : ":nth-child(5) > .col-lg-6 > .form-control",
+        "password" : ":nth-child(6) > .col-lg-6 > .form-control",
+        "confirm" : "[ng-if=\"addModel.step == 'db'\"] > .modal-footer > [data-text=\"确定\"]"
+    },
+    "table": {
+        "table" : ".table",
+        "checkboxCell" : "[type=\"checkbox\"]"
+    },
+    "popup" :{
+        "confirm":".layui-layer-btn0",
+        "cancel":".layui-layer-btn1"
+    }
+}

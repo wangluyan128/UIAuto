@@ -1,19 +1,26 @@
-import {dmLoginUser} from "./datas/dmLogin.data";
-import dmLogin from "./pages/dmLoginPage";
-import dmLoginPage from "./pages/dmLoginPage";
 
-context("登录测试",()=>{
+import LoginPage from "./Page/dmLoginPage";
+import {dmLoginUser} from "./datas/dmLogin.data"
+
+
+describe("测试",()=>{
+
     beforeEach(()=>{
-        cy.visit("/")
+        cy.visit('/');
     })
-    //循环测试数据
     for (const user of dmLoginUser){
+        const loginPage = new LoginPage()
         it(user.summary, function () {
-            //Cypress.log(user.password)
-            const loginpage = new dmLoginPage()
-            cy.dmlogin(loginpage.username,loginpage.password,loginpage.btn,user.username,user.password)
-           // cy.url().should('include','home.html')
-            cy.get('.login-error').should('not.exist')
+            loginPage.getUsername.type(user.username)
+            loginPage.getPassword.type(user.password)
+            loginPage.getBtn.click()
+            if (user.summary == "登录成功"){
+                loginPage.getErr.should('not.exist')
+            }
+            if (user.summary =="登录失败"){
+                loginPage.getErr.should('exist')
+            }
+
         });
     }
 })

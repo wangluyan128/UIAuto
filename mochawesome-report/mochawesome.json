@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 5,
-    "tests": 4,
-    "passes": 4,
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
     "pending": 0,
-    "failures": 0,
-    "start": "2021-06-03T05:59:48.508Z",
-    "end": "2021-06-03T06:00:11.411Z",
-    "duration": 22903,
-    "testsRegistered": 4,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2021-06-08T06:15:41.478Z",
+    "end": "2021-06-08T06:15:49.190Z",
+    "duration": 7712,
+    "testsRegistered": 2,
+    "passPercent": 50,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,185 +18,73 @@
   },
   "results": [
     {
-      "uuid": "ea5cb57c-8867-4b53-9b96-bb181b1a91cb",
+      "uuid": "8c13089c-c5f6-443f-9dbc-6aca8667dca4",
       "title": "",
-      "fullFile": "cypress/integration/数据脱敏/testdmyuanhmb.js",
-      "file": "cypress/integration/数据脱敏/testdmyuanhmb.js",
+      "fullFile": "cypress/integration/数据脱敏/testdemo.js",
+      "file": "cypress/integration/数据脱敏/testdemo.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "6b6babea-4eb7-4001-9e59-31177d0d63c3",
-          "title": "源和目标",
+          "uuid": "c709f639-9d11-49b4-a0b0-39312e295ada",
+          "title": "测试",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
-          "tests": [],
-          "suites": [
+          "tests": [
             {
-              "uuid": "dc12068c-ee3d-409a-9dd2-cb2c3f3f926a",
-              "title": "关系型数据库",
-              "fullFile": "",
-              "file": "",
-              "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
-                {
-                  "title": "新增",
-                  "fullTitle": "源和目标 关系型数据库 新增",
-                  "timedOut": null,
-                  "duration": 7468,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "cy.elementClick(navpage.yuanhmb);\ncy.elementClick(navpage.yuanhmb);\ncy.elementClick(createSource.new);\ncy.textvalue(createSource.newname, \"关系数据库测试\");\ncy.selectvalue(createSource.newtype, \"关系型数据库\", '关系型数据库');\ncy.selectvalue(createSource.newsubtype, \"Mysql\", \"Mysql\");\ncy.rediovalue(createSource.newredioyuan);\ncy.get(createSource.newnextbtn).click();\ncy.textvalue(createSource.newIpadress, \"192.168.42.46\");\ncy.textvalue(createSource.newport, \"3306\");\ncy.textvalue(createSource.newdatabasename, \"testdemo\");\ncy.textvalue(createSource.newusername, \"root\");\ncy.textvalue(createSource.newpassword, \"12345678\");\ncy.get(createSource.newconfirm).click();",
-                  "err": {},
-                  "uuid": "c3147acf-1ecf-4f2e-9cd3-216e0bbc9d4c",
-                  "parentUUID": "dc12068c-ee3d-409a-9dd2-cb2c3f3f926a",
-                  "isHook": false,
-                  "skipped": false
-                }
-              ],
-              "suites": [],
-              "passes": [
-                "c3147acf-1ecf-4f2e-9cd3-216e0bbc9d4c"
-              ],
-              "failures": [],
-              "pending": [],
-              "skipped": [],
-              "duration": 7468,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 2000
+              "title": "登录成功",
+              "fullTitle": "测试 登录成功",
+              "timedOut": null,
+              "duration": 2359,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.getUsername.type(user.username);\nloginPage.getPassword.type(user.password);\nloginPage.getBtn.click();\ncy.get('.login-error').should('not.exist');",
+              "err": {},
+              "uuid": "2638f80d-c52a-4db1-9e17-b56d85d8c6f9",
+              "parentUUID": "c709f639-9d11-49b4-a0b0-39312e295ada",
+              "isHook": false,
+              "skipped": false
             },
             {
-              "uuid": "32cef3bc-401c-4fe5-a339-d15bf91af033",
-              "title": "关系型数据库",
-              "fullFile": "",
-              "file": "",
-              "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
-                {
-                  "title": "按名称搜索",
-                  "fullTitle": "源和目标 关系型数据库 按名称搜索",
-                  "timedOut": null,
-                  "duration": 4524,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "cy.elementClick(navpage.yuanhmb);\ncy.textvalue(createSource.searchname, \"关系数据库测试\");\ncy.get(createSource.searchbtn).click(); //cy.get(\"/html/body/ui-view/div[2]/div[1]/div[3]/table/tbody[2]\")\n// cy.log(cy.get(\"[title=\\\"mysql目标-42.19\\\"]\").t)\n/*cy.xpath(\"/html/body/ui-view/div[2]/div[1]/div[3]/table/tbody[2]/tr[2]\").each(($el)=>{\n    cy.wrap($el).within(()=>{\n        cy.log($el.text())\n    })\n})*/\ncy.tdValue(\"/html/body/ui-view/div[2]/div[1]/div[3]/table/tbody[2]/tr[2]\", \"关系数据库测试\");",
-                  "err": {},
-                  "uuid": "cd680000-7dcb-4460-9a25-6ae9650718db",
-                  "parentUUID": "32cef3bc-401c-4fe5-a339-d15bf91af033",
-                  "isHook": false,
-                  "skipped": false
-                }
-              ],
-              "suites": [],
-              "passes": [
-                "cd680000-7dcb-4460-9a25-6ae9650718db"
-              ],
-              "failures": [],
-              "pending": [],
-              "skipped": [],
-              "duration": 4524,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 2000
-            },
-            {
-              "uuid": "ab747df9-ab29-4315-a107-06642df91f32",
-              "title": "关系型数据库",
-              "fullFile": "",
-              "file": "",
-              "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
-                {
-                  "title": "编辑",
-                  "fullTitle": "源和目标 关系型数据库 编辑",
-                  "timedOut": null,
-                  "duration": 5604,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "cy.elementClick(navpage.yuanhmb);\ncy.textvalue(createSource.searchname, \"关系数据库测试\");\ncy.get(createSource.searchbtn).click(); //cy.get(\"/html/body/ui-view/div[2]/div[1]/div[3]/table/tbody[2]\")\n// cy.log(cy.get(\"[title=\\\"mysql目标-42.19\\\"]\").t)\n/*cy.xpath(\"/html/body/ui-view/div[2]/div[1]/div[3]/table/tbody[2]/tr[2]\").each(($el)=>{\n    cy.wrap($el).within(()=>{\n        cy.log($el.text())\n    })\n})*/\ncy.tdValue(\"/html/body/ui-view/div[2]/div[1]/div[3]/table/tbody[2]/tr[2]\", \"关系数据库测试\");\ncy.elementClick(createSource.yuanedit);\ncy.get(createSource.yuaneditname).clear();\ncy.textvalue(createSource.yuaneditname, \"relationaldatabasetest\");\ncy.elementClick(createSource.yuaneditnextstep);\ncy.elementClick(createSource.yuaneditconfirm);",
-                  "err": {},
-                  "uuid": "c686df90-254c-4a9e-b441-5c7c4e5006e4",
-                  "parentUUID": "ab747df9-ab29-4315-a107-06642df91f32",
-                  "isHook": false,
-                  "skipped": false
-                }
-              ],
-              "suites": [],
-              "passes": [
-                "c686df90-254c-4a9e-b441-5c7c4e5006e4"
-              ],
-              "failures": [],
-              "pending": [],
-              "skipped": [],
-              "duration": 5604,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 2000
-            },
-            {
-              "uuid": "9647c777-668f-4cc4-abb4-be2190e40f7e",
-              "title": "关系型数据库",
-              "fullFile": "",
-              "file": "",
-              "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
-                {
-                  "title": "删除",
-                  "fullTitle": "源和目标 关系型数据库 删除",
-                  "timedOut": null,
-                  "duration": 5179,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "cy.elementClick(navpage.yuanhmb);\ncy.textvalue(createSource.searchname, \"relationaldatabasetest\");\ncy.get(createSource.searchbtn).click();\ncy.rediovalue(\":nth-child(2) > .text-center > input\");\ncy.elementClick(createSource.del);\ncy.elementClick(createSource.popupConfirm);\ncy.tdValue(\"/html/body/ui-view/div[2]/div[1]/div[3]/table/tbody[2]/tr[1]/td\", \"数据为空\");",
-                  "err": {},
-                  "uuid": "c135e702-0929-41c9-af5e-ca6054e06d4f",
-                  "parentUUID": "9647c777-668f-4cc4-abb4-be2190e40f7e",
-                  "isHook": false,
-                  "skipped": false
-                }
-              ],
-              "suites": [],
-              "passes": [
-                "c135e702-0929-41c9-af5e-ca6054e06d4f"
-              ],
-              "failures": [],
-              "pending": [],
-              "skipped": [],
-              "duration": 5179,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 2000
+              "title": "登录失败",
+              "fullTitle": "测试 登录失败",
+              "timedOut": null,
+              "duration": 5272,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.getUsername.type(user.username);\nloginPage.getPassword.type(user.password);\nloginPage.getBtn.click();\ncy.get('.login-error').should('not.exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected <div.login-error.ng-binding> not to exist in the DOM, but it was continuously found.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected <div.login-error.ng-binding> not to exist in the DOM, but it was continuously found.\n    at Context.eval (https://192.168.202.161:8443/__cypress/tests?p=cypress\\integration\\数据脱敏\\testdemo.js:213:30)",
+                "diff": null
+              },
+              "uuid": "13f50adb-fe32-4dd2-bcd6-5c7fc4d81b4e",
+              "parentUUID": "c709f639-9d11-49b4-a0b0-39312e295ada",
+              "isHook": false,
+              "skipped": false
             }
           ],
-          "passes": [],
-          "failures": [],
+          "suites": [],
+          "passes": [
+            "2638f80d-c52a-4db1-9e17-b56d85d8c6f9"
+          ],
+          "failures": [
+            "13f50adb-fe32-4dd2-bcd6-5c7fc4d81b4e"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 0,
+          "duration": 7631,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

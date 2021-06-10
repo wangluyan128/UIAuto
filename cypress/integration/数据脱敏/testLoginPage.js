@@ -1,5 +1,5 @@
-import LoginPage from "./pages/login";
-import mainPage from "./pages/login";
+import LoginPage from "./Page/login";
+import mainPage from "./Page/login";
 
 
 
