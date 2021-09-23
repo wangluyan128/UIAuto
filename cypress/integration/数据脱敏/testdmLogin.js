@@ -3,7 +3,7 @@ import LoginPage from "./Page/dmLoginPage";
 import {dmLoginUser} from "./datas/dmLogin.data"
 
 
-describe("测试",()=>{
+describe("登录测试",()=>{
 
     beforeEach(()=>{
         cy.visit('/');
